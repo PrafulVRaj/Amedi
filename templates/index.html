@@ -1,0 +1,140 @@
+
+
+{% extends 'base.html' %}
+
+{% block pagetitle %}Aushadhi Nirikṣaṇa{% endblock pagetitle %}
+
+{% block head %}
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+{% endblock head %}
+
+{% block body %}
+<div class="font-roboto">
+
+  <div class="relative">
+
+   <img alt="A background image of a lush green garden with various plants and flowers" class="absolute inset-0 w-full h-full object-cover" height="1080" src="https://storage.googleapis.com/a1aa/image/nku9msJNOu5RL5IdKV32Tjd1XEXBybGu4NiYpVV3TLpUe37JA.jpg" width="1920"/>
+
+   <div class="relative bg-opacity-75 bg-gray-900 w-full h-full">
+
+    <div class="container mx-auto p-4">
+
+     <div class="text-center text-white mb-5">
+
+      <h1 class="text-4xl font-bold py-4">
+
+       🌿 Medical Plants Detection 🌿
+
+      </h1>
+
+      <p class="text-lg font-medium">
+
+       Let AI Help You Detect Medical Plants
+
+      </p>
+
+     </div>
+
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+      <div class="bg-white p-5 shadow rounded-lg">
+
+       <h5 class="text-xl font-bold mb-3">
+
+        The importance of medical plants :
+
+       </h5>
+
+       <p class="text-gray-700">
+
+        Medicinal plants play a crucial role in both traditional and modern healthcare. For centuries, they have been used in various cultures to treat illnesses and promote overall wellness. Many pharmaceutical drugs are derived from plant compounds, underscoring their importance in drug discovery. Medicinal plants offer a natural and cost-effective alternative to synthetic medications, making them particularly valuable in rural and underserved areas. They also contribute to biodiversity and environmental sustainability. Beyond physical health, plants like lavender and chamomile provide psychological benefits, helping to reduce stress and anxiety.
+
+       </p>
+
+      </div>
+
+      <div class="bg-white p-5 shadow rounded-lg flex flex-col items-center">
+
+       <img alt="A detailed image of a tropical plant with lush green leaves" class="mb-4 rounded-full" height="300" src="https://storage.googleapis.com/a1aa/image/LB2KHbCO1T4hHldK3cNuZzWrymcBjbIwOQRi4b43eYnq837JA.jpg" width="200"/>
+
+       <form action="/submit" class="w-full" enctype="multipart/form-data" method="POST">
+
+        <div class="mb-4">
+
+         <input hidden="" id="actual-btn" name="image" type="file"/>
+
+         <label class="block text-center bg-gray-200 py-2 px-4 rounded cursor-pointer" for="actual-btn">
+
+          Choose File
+
+         </label>
+
+         <span class="block text-center mt-2 text-gray-500" id="file-chosen">
+
+          No file chosen
+
+         </span>
+
+        </div>
+
+        <p class="text-center text-gray-600 mb-4">
+
+         Simply upload your plant's leaf image.
+
+        </p>
+
+        <div class="text-center">
+         
+          <button class="btn btn-outline-success bg-green-500 text-white py-2 px-4 rounded">
+
+          Submit
+
+         </button>
+
+        </div>
+
+       </form>
+
+      </div>
+
+      <div class="bg-white p-5 shadow rounded-lg">
+
+       <h5 class="text-xl font-bold mb-3">
+
+        "In nature, there is no cure for a disease that is not already present in a plant. Ayurveda recognizes this balance and empowers us to live in harmony with the natural world."
+
+       </h5>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+  <script>
+
+   const actualBtn = document.getElementById('actual-btn');
+
+        const fileChosen = document.getElementById('file-chosen');
+
+
+
+        actualBtn.addEventListener('change', function () {
+
+            fileChosen.textContent = this.files[0].name;
+
+        });
+
+  </script>
+
+ </body>
+</html>
+
+ {% endblock body %}
+
